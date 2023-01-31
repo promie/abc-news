@@ -1,0 +1,23 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+figure figcaption {
+    color: #646464;
+    font-size: 0.75rem;
+    padding: 1.6rem 0;
+}
+
+@media (min-width: 62rem) {
+    figure.right {
+        width: 50%;
+        float: right;
+        clear: right;
+        margin: 0 0 0 1.5rem;
+    }
+}

@@ -1,0 +1,138 @@
+.shareLink {
+    border-bottom: 0.0625rem solid #e6e6e6;
+    padding: 0 0 1.25rem 1.25rem;
+}
+
+.print {
+    display: flex;
+    align-items: center;
+}
+
+.print h4 {
+    width: 100%;
+}
+
+.icon {
+    display: flex;
+    justify-content: right;
+}
+
+.share {
+    display: flex;
+}
+
+.link {
+    padding: 0.938rem;
+    border-radius: 2.188rem;
+    background-color: #F2F2F2;
+    font-size: 0.938rem;
+    margin-right: 0.625rem;
+    cursor: pointer;
+}
+
+.copyBtn {
+    background-color: #5CCDFA;
+    border: none;
+    color: #FFF;
+    padding: 0.25rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 0.625rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.copyBtn:hover {
+    background-color: #2C3236;
+}
+
+.copyBtn:hover .icon {
+    color: #fff;
+}
+
+.copyBtn:hover .spacing {
+    color: #fff;
+}
+
+.shareBtn {
+    background-color: #FFF;
+    border: 0.125rem solid #5CCDFA;
+    color: #000;
+    padding: 0.25rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 0.625rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.shareBtn:hover {
+    background-color: #5CCDFA;
+}
+
+
+.spacing {
+    margin-left: 0.625rem;
+    font-weight: bold;
+    color: #000;
+    font-size: 0.75rem;
+    letter-spacing: .03rem;
+}
+
+
+.icon {
+    color: #000;
+}
+
+.printer {
+    cursor: pointer;
+    margin-right: 1.25rem;
+}
+
+@media (max-width: 62em) {
+    .shareLink {
+        border-bottom: 0.0625rem solid #e6e6e6;
+        padding: 0 0 1.25rem 0.25rem;
+    }
+
+    .link {
+        padding: 0.5875rem;
+        border-radius: 2.375rem;
+        background-color: #F2F2F2;
+        font-size: 0.5875rem;
+        margin-right: 0.39375rem;
+        cursor: pointer;
+    }
+
+    .copyBtn {
+        background-color: #5CCDFA;
+        border: none;
+        color: #FFF;
+        padding: 0.3125rem 1.25rem;
+        font-size: 0.625rem;
+        cursor: pointer;
+        margin-right: 0.625rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .shareBtn {
+        background-color: #FFF;
+        border: 0.125rem solid #5CCDFA;
+        color: #000;
+        padding: 0.3125rem 1.25rem;
+        font-size: 0.625rem;
+        cursor: pointer;
+        margin-right: 0.625rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+

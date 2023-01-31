@@ -1,9 +1,14 @@
+body {
+    font-size: 1rem;
+}
+
 .article {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+
 }
 
 .header {
@@ -19,13 +24,17 @@
   line-height: 3rem;
 }
 
-.contributors,
-.date {
-  display: block;
-  line-height: 1.25rem;
-  letter-spacing: .03125rem;
-  font-weight: 400;
-  font-size: .75rem;
+.feature {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.feature figcaption {
+  padding: 16px;
+}
+
+.main {
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
 }
 
 @media (min-width: 62em) {
@@ -43,6 +52,14 @@
   }
 }
 
+@media (min-width: 67em) {
+
+  .content figure {
+    margin-right: -4rem;
+    margin-left: -4rem;
+  }
+}
+
 @media (max-width: 62em) {
   .main {
     width: 100%;
@@ -56,8 +73,10 @@
 }
 
 .content {
-  width: 100%;
+  max-width: 638px;
   padding: 3rem 1rem 0 1rem;
+  margin: 0 auto;
+  position: relative;
 }
 
 .sidebar h2 {
@@ -69,30 +88,30 @@
   margin: auto;
   width: 100%;
   height: 600px; /* change height to see repeat-y behavior */
-  
+
   background-image:
-    radial-gradient( circle 50px at 50px 50px, lightgray 99%, transparent 0 ),
-    linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
-    linear-gradient( lightgray 20px, transparent 0 ),
-    linear-gradient( lightgray 20px, transparent 0 ),
-    linear-gradient( lightgray 20px, transparent 0 ),
-    linear-gradient( lightgray 20px, transparent 0 );
+          radial-gradient( circle 50px at 50px 50px, lightgray 99%, transparent 0 ),
+          linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+          linear-gradient( lightgray 20px, transparent 0 ),
+          linear-gradient( lightgray 20px, transparent 0 ),
+          linear-gradient( lightgray 20px, transparent 0 ),
+          linear-gradient( lightgray 20px, transparent 0 );
 
   background-repeat: repeat-y;
 
   background-size:
-    100px 200px, /* circle */
-    50px 200px, /* highlight */
-    150px 200px,
-    350px 200px,
-    300px 200px,
-    250px 200px;
+          100px 200px, /* circle */
+          50px 200px, /* highlight */
+          150px 200px,
+          350px 200px,
+          300px 200px,
+          250px 200px;
 
   background-position:
-    0 0, /* circle */
-    0 0, /* highlight */
-    120px 0,
-    120px 40px,
-    120px 80px,
-    120px 120px;
+          0 0, /* circle */
+          0 0, /* highlight */
+          120px 0,
+          120px 40px,
+          120px 80px,
+          120px 120px;
 }

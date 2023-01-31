@@ -20,10 +20,32 @@ These include:
 - implementing E2E testing with Selenium or Cypress, 
 - verifying accessibility through proper aria tags and tab indexing for screen readers.
 
+Below you can find the information on the usage.
+
+## Requirements
+- Yarn v1.x.x
+- Node v16.x
+
+## Installation
+```bash
+$ yarn
+```
+
+## How to run
+### Local
+```bash
+yarn run start
+```
+
+The React application will spin up on `http://localhost:3000/`
+
+
 It is important to run the tests and evaluate their results. I have taken great care in considering various scenarios when constructing them.
 You can run the tests by executing the following command:
 
-```$ yarn run test```
+```bash
+$ yarn run test
+```
 
 Please note, all tests should pass. Although there may be a console warning, it is one of the issues that I intended to resolve if given more time.
 

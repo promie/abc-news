@@ -1,0 +1,14 @@
+.featured {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.caption {
+    padding: 20px;
+    font-size: .75rem;
+    color: gray;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}

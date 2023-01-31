@@ -1,42 +1,48 @@
-import React from 'react';
+import { FC, ReactNode } from 'react';
 import styles from './Article.module.css';
+import { ISource, IDates, IContributor } from '../../types';
+import Meta from '../Meta/Meta';
+import Featured from '../Featured/Featured';
+import ShareLink from '../ShareLink/ShareLink';
 
-interface Props {
-  children: React.ReactNode;
+interface IProps {
   title: string;
-  contributors?: string[];
-  dates?: {
-    posted: string;
-    updated?: string;
-  };
-};
+  contributors?: IContributor[];
+  source?: ISource;
+  dates?: IDates;
+  mediaFeatured?: any;
+  canonicalURL: string;
+  children: ReactNode;
+}
 
-const Article = ({ children, title, contributors, dates }: Props): JSX.Element => (
-  <article className={styles.article}>
-    <div className={styles.main}>
-      <div className={styles.header}>
-        <h1>{title}</h1>
-        {contributors && contributors.length && (
-          <span className={styles.contributors}>
-            By {contributors.join(', ')}
-          </span>
-        )}
-        {dates && (
-          <span className={styles.date}>
-            {dates.posted && (<span>Posted {dates.posted}</span>)}
-            {dates.updated && (<span>{' '}Updated {dates.updated}</span>)}
-          </span>
-        )}
+const Article: FC<IProps> = ({
+  title,
+  contributors,
+  dates,
+  source,
+  mediaFeatured,
+  canonicalURL,
+  children,
+}) => {
+  return (
+    <article className={styles.article}>
+      <div className={styles.main}>
+        <div className={styles.header}>
+          <h1>{title}</h1>
+          <Meta source={source} contributors={contributors} dates={dates} />
+        </div>
+
+        <Featured mediaFeatured={mediaFeatured} />
+        <ShareLink canonicalURL={canonicalURL} />
+
+        <div className={styles.content}>{children}</div>
       </div>
-      <div className={styles.content}>
-        {children}
+      <div className={styles.sidebar}>
+        <h2>More Stories</h2>
+        <div className={styles.moreStories} />
       </div>
-    </div>
-    <div className={styles.sidebar}>
-      <h2>More Stories</h2>
-      <div className={styles.moreStories} />
-    </div>
-  </article>
-);
+    </article>
+  );
+};
 
 export default Article;

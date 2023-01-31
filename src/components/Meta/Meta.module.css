@@ -1,0 +1,15 @@
+.meta {
+    display: flex;
+}
+
+.meta,
+.dates {
+    font-weight: 400;
+    font-size: .75rem;
+    letter-spacing: .03rem;
+}
+
+.dates {
+    margin-top: 0.30rem;
+}
+
